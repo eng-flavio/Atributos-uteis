@@ -21,6 +21,7 @@ def itransFourier(sinalt):
     sinalf=np.fft.ifft(sinalt)
     #sinalf=np.fft.fftshift(sinalf)
     return sinalf
+
 #FLTRAGEM
 def filtragem(sinalt,freq):
     sinalf = np.fft.fft(sinalt)
@@ -34,7 +35,7 @@ def media(sinalf):
     for i in range(960):
          med[i] = sum(sinalf[10*i:10*(i+1)]) / 10
     return med
-
+    
 
 #Kurtosis
 def Kurt(vet):
